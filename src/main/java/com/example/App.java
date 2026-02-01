@@ -14,7 +14,7 @@ public class App {
         UserService service = new UserService();
         if (service != null) {
             service.findUser("admin");
-            service.deleteUser("admin"); // NEW dangerous call
+            service.deleteUser("admin");
         }
     }
 }
