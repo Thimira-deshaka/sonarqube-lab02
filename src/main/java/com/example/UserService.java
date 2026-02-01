@@ -21,7 +21,7 @@ public class UserService {
             st.executeQuery(query);
         } catch (SQLException e) {
             logger.severe("Error finding user: " + e.getMessage());
-            throw e;
+            throw new SQLException("Failed to find user: " + username, e);
         }
     }
 
@@ -33,7 +33,7 @@ public class UserService {
             st.execute(query);
         } catch (SQLException e) {
             logger.severe("Error deleting user: " + e.getMessage());
-            throw e;
+            throw new SQLException("Failed to delete user: " + username, e);
         }
     }
 
