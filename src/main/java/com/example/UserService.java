@@ -36,9 +36,4 @@ public class UserService {
             throw new SQLException("Failed to delete user: " + username, e);
         }
     }
-
-    // SMELL: Unused method
-    public void notUsed() {
-        logger.info("I am never called");
-    }
 }
